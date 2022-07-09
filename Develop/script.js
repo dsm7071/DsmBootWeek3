@@ -4,10 +4,10 @@ var generateBtn = document.querySelector("#generate");
 
 
 function generatePassword() {
-// I did not comepletely write this code, meaning most of it was written following a few examples from stack overflow that made sense to me.
+// I did not completely write this code, meaning most of it was written following a few examples from stack overflow that made sense to me.
  
   var length = Number(prompt("Choose password length (min 8 - max 128 chracaters)" ))
-  var charType = prompt("Coose Character type: special, numeric, uppercase, lowercase.")
+  var charType = prompt("Choose Character type: special, numeric, uppercase, lowercase.")
       var  charsets = {
         lowercase: 'abcdefghijklmnopqrstuvwxyz',
         uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -17,7 +17,7 @@ function generatePassword() {
 
   // During my research I did find the fact that Math.random is not cryptographically secure for an actual real world password. 
   // I contemplated using a more secure way but I didn find it a little overkill for this assignment. So I stuck with the "simplest" version.
-  // Hopefully we will see more about crypto secure stuff later in the bootcamp, otherwise I'm already aware of it;s real world implementations.
+  // Hopefully we will see more about crypto secure stuff later in the bootcamp, otherwise I'm already aware of it's real world implementations.
   var charset = charsets[charType.toLowerCase()] || charsets.lowercase;
   var retVal = "";
   for (var i = 0, n = charset.length; i < length; i++) {
